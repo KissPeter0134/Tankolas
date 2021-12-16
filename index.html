@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+
+     <title>Tankolás.hu</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/aos.css">
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' 
+     rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Dosis|Raleway">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">Tankolás.hu</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link smoothScroll">Főoldal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#price_change" class="nav-link smoothScroll">Árváltozás</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#news" class="nav-link smoothScroll">Hírek</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#schedule" class="nav-link smoothScroll">Aktuális üzemanyagár</a>
+                    </li>
+                </ul>
+
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="https://facebook.com/" class="fa fa-facebook" target="_blank"></a></li>
+                    <li><a href="https://twitter.com" class="fa fa-twitter" target="_blank"></a></li>
+                    <li><a href="https://instagram.com" class="fa fa-instagram" target="_blank"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+     <!-- HOME -->
+     <section class="background d-flex flex-column justify-content-center align-items-center" id="home">
+
+            <div class="home"></div>
+
+               <div class="container">
+                    <div class="row">
+
+                         <div class="col-lg-8 col-md-10 mx-auto col-12">
+                              <div class="hero-text mt-5 text-center">
+
+                                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Aktuális üzemanyagár információk</h1>
+
+                                    <a href="#" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">???</a>
+                                    <a href="#" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">???</a>
+                                    
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <section class="arvaltozas" id="price_change">
+        <div class="container">
+            <div class="row">
+
+                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
+                    <h2 data-aos="fade-up" data-aos-delay="800" style="color: white">Üzemanyag-fogyasztás kalkulátor </h2>
+                    <p></p>
+                    <p></p>
+
+                    <p data-aos="fade-up" data-aos-delay="800" style="color: white;">Megtett távolság (km): <input id="distance" type="number" min="1" max="1000000" onchange="computeConsumption()"></p>
+
+                    <p data-aos="fade-up" data-aos-delay="800" style="color: white;">Elfogyasztott üzemanyag (L): <input id="fuel" type="number" min="1" max="10000000" step="1" onchange="computeConsumption()"></p>
+
+                    <p data-aos="fade-up" data-aos-delay="800" style="color: white;">Egy liter üzemanyag: <input id="costper" type="number" min="0" max="10000" step="1" value="480" onchange="computeConsumption()"> Ft</p>
+
+                    <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500" id="consumption" style="color: white;"></h2>
+                </div>
+
+                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
+                     <div class="uzamanyagar">
+                          <div>
+
+                                <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">Üzemanyagár-változás 2021.11.26-tól</h2>
+
+                                <p data-aos="fade-up" data-aos-delay="800" style="color: white;">A héten pénteken a 95-ös benzin nagykereskedelmi árát csökkentik, ez bruttó 4 forintot jelent most a benzinkutaknak. Ezzel egy kicsit élhetőbbnek mondható a hatósági ár bevezetése az üzemanyag szektor számára. A csökkentés hatására elképzelhető, hogy a prémium benzin eladási ára csökken. </p>
+
+                               </div>
+                          </div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+     <!-- NEWS -->
+     <section class="class section" id="news">
+               <div class="container">
+                    <div class="row">
+
+                            <div class="col-lg-12 col-12 text-center mb-5">
+                                <h2 data-aos="fade-up" data-aos-delay="200">Hírek</h2>
+                             </div>
+
+                            <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="100">
+                                <div class="class-thumb">
+                                    <img src="images/turizmus.jpg" class="img-fluid" alt="Class">
+
+                                    <div class="news-info">
+                                        <h3 class="mb-1">Belendülhet az üzemanyag-turizmus a 480 forintban maximalizált ár miatt</h3>
+                                        <p></p>
+                                        <div class="accordion-item">
+                                            <p class="title" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600" style="color: red;">Bővebben</p>
+                                            <div class="accordion-content">
+                                            <p>Sok országban ennél többet kell fizetni a termékekért.</p>
+
+                                            <p>Belendülhet az üzemanyag-turizmus, és többet tankolhatnak a magyarországi autósok is arra reagálva, hogy november 15-től a jogszabály 480 forintban maximalizálta a normál benzin és a gázolaj árát - mondta Grád Ottó, a Magyar Ásványolaj Szövetség (MÁSZ) főtitkára a hétfői Világgazdaságnak.</p>
+                                                
+                                            <p>Szerinte a környező országokban sokkal többet kell fizetni az üzemanyagokért, így nagyon valószínű például, hogy a Tompánál belépő kamionosok még a kilépés előtt teletankolnak Mosonmagyaróvárnál.</p>
+                                                
+                                            <p>A főtitkár azt is mondta: azok a külföldi lakosok, akik eddig is átjártak Magyarországra vásárolni, a következő három hónapban valószínűleg az autójuk benzintartályát is megtöltik. Grád úgy látja, ennek köszönhetően megállhat az üzemanyag-értékesítés lassulása, amit az év korábbi hónapjaiban a magas árak okoztak.</p>
+                                                
+                                            <p>Az eladások mennyiségi növekedésének viszont nem minden forgalmazó örül, és ennek éppen az alacsonyabb egységár az oka. „Annak alapján, hogy a havi országos üzemanyag-fogyasztás mintegy 500 millió liter, a kötelező árcsökkentés pedig körülbelül 30 forint volt az utolsó vasárnapi átlagárhoz képest, a forgalmazók együtt havonta mintegy 15 milliárd forint bevételtől esnek el” - mondta a főtitkár.</p>
+                                                
+                                            <p>A Világgazdaság szerint a MÁSZ már eljuttatta javaslatait a döntéshozóknak, melyek szerint bizonyos pontokon célszerű lenne módosítani a normál üzemanyagok árának maximalizálására vonatkozó jogszabályt.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="class-thumb">
+                                    <img src="images/ferrari.jpg" class="img-fluid" alt="Class">
+                                    <div class="news-info">
+                                        <h3 class="mb-1">Ferrari SF90 Stradale - hibrid hajtás, 1000 lóerő, akárcsak az F1-ben</h3>
+                                        <p></p>
+                                        <div class="accordion-item">
+                                            <p class="title" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600" style="color: red;">Bővebben</p>
+                                            <div class="accordion-content">
+                                            <p>Az olasz gyártó az autó bemutatásával egy időben azt is megerősítette, hogy a Ferrari történetének legerősebb modellje készült most el. A plug-in hibrid rendszerrel szerelt autó nevében szereplő SF90-ből a rajongók számára az is egyértelművé válhat, hogy kapcsolat van az autó és a Forma-1 között, és valóban így van, hiszen az elnevezés ezúttal is a Scuderia Ferrari 90. évfordulójára utal..</p>
+
+                                            <p>A márka történetének első plug-in hibrid hajtáslánccal kínált modelljét az "extrém" jelzővel illette a gyártó, majd hozzátették, akárcsak korábban, most is erős a kapocs a közúti és a versenyspecifikus F1-es modell között, ugyanis a száguldó cirkuszban megszerzett tudást az utcai autó megalkotásakor is felhasználták.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="class-thumb">
+                                    <img src="images/buntetofek.jpg" class="img-fluid" alt="Class">
+                                    <div class="news-info">
+                                        <h3 class="mb-1">Nagyon pórult járt az autós, akinek büntetőfékezését rögzítette egy kamera.</h3>
+                                        <p></p>
+                                        <div class="accordion-item">
+                                            <p class="title" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600" style="color: red;">Bővebben</p>
+                                            <div class="accordion-content">
+                                            <p>Nagyon pórult járt az autós, akinek büntetőfékezését rögzítette egy fedélzeti kamera az M5-ös autópályán.</p>
+
+                                            <p>Még január 12-én tettek közzé egy videót, amelyen egy M5-ösön büntetőfékező autós látható. A Bpiautosok.hu felvétele a rendőrséghez is eljutott, a Mercedes vezetője ellen közúti veszélyeztetés miatt indítottak eljárást. A rendőrök a térfigyelő kamerák felvételeit is elemezték, majd azonosították a bűncselekmény elkövetőjét.</p>
+                                            <p>A 32 éves kecskeméti férfit gyanúsítottként hallgatták ki, valamint kezdeményezték a vezetői engedélyének visszavonását.</p>
+                                            <p style="color: red;"><a href="https://www.youtube.com/watch?v=xtB16GFeDYM" target="_blank">A videó!</a></p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+               </div>
+     </section>
+
+
+     <!-- SCHEDULE -->
+     <section class="schedule section" id="schedule">
+               <div class="container">
+                    <div class="row">
+
+                            <div class="col-lg-12 col-12 text-center">
+                                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Aktuális üzemanyagárak</h2>
+                             </div>
+
+                             <div class="col-lg-12 py-5 col-md-12 col-12">
+                                 <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">
+
+                                     <thead class="thead-light">
+                                         <th><img src="images/gas-pump.png"></th>
+                                         <th>Minimum ár</th>
+                                         <th>Átlag ár</th>
+                                         <th>Maximum ár</th>
+                                     </thead>
+
+                                     <tbody>
+                                         <tr>
+                                            <td><small>95-ös Benzin E10</small></td>
+                                            <td>
+                                                <strong>469.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>479.5,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>480.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><small>Prémium Benzin E10</small></td>
+                                            <td>
+                                                <strong>475.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>482.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>543.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><small>98-As Benzin E5</small></td>
+                                            <td>
+                                                <strong>497.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>526.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>559.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><small>100-As Benzin E5</small></td>
+                                            <td>
+                                                <strong>499.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>537.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>570.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><small>Gázolaj</small></td>
+                                            <td>
+                                                <strong>469.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>479.7,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>480.0,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+
+                                         <tr>
+                                            <td><small>Prémium Gázolaj</small></td>
+                                            <td>
+                                                <strong>479.8,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>521.3,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                            <td>
+                                                <strong>	
+                                                    573.9,- Ft</strong>
+                                                <span>/ liter</span>
+                                            </td>
+                                         </tr>
+                                     </tbody>
+                                 </table>
+                             </div>
+
+                    </div>
+               </div>
+     </section>
+
+     <!-- FOOTER -->
+     <footer class="site-footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="ml-auto col-lg-4 col-md-5">
+                        <p class="copyright-text">Copyright &copy; 2021 Tankolás.hu
+                        
+                        <br>Made by: Kiss Péter</p>
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                        <p class="mr-4">
+                            <i class="fa fa-envelope-o mr-1"></i>
+                            kisspeter0134@gmail.com
+                        </p>
+
+                        <p><i class="fa fa-phone mr-1"></i> +36501234567</p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/bovebben.js"></script>
+     <script src="fuelconsumption.js"></script>
+
+</body>
+</html>
